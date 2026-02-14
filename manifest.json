@@ -1,0 +1,9 @@
+{
+	"id": "qmd-desktop-search",
+	"name": "QMD Search for Desktop",
+	"version": "0.1.0",
+	"minAppVersion": "1.0.0",
+	"description": "Search your vault using QMD. Requires qmd CLI installed and a collection named 'obsidian'.",
+	"author": "Rajavanya Subramaniyan",
+	"isDesktopOnly": true
+}
