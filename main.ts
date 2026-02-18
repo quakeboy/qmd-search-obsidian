@@ -45,7 +45,7 @@ export default class QmdSearchPlugin extends Plugin {
 
 		this.addCommand({
 			id: "qmd-search",
-			name: "QMD: Keyword search (fast)",
+			name: "Keyword search (fast)",
 			callback: () => {
 				new QmdSearchModal(this.app, this, "search").open();
 			},
@@ -53,7 +53,7 @@ export default class QmdSearchPlugin extends Plugin {
 
 		this.addCommand({
 			id: "qmd-vsearch",
-			name: "QMD: Semantic search",
+			name: "Semantic search",
 			callback: () => {
 				new QmdSearchModal(this.app, this, "vsearch").open();
 			},
@@ -61,7 +61,7 @@ export default class QmdSearchPlugin extends Plugin {
 
 		this.addCommand({
 			id: "qmd-query",
-			name: "QMD: Hybrid search (best quality)",
+			name: "Hybrid search (best quality)",
 			callback: () => {
 				new QmdSearchModal(this.app, this, "query").open();
 			},
