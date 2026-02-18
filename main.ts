@@ -231,7 +231,7 @@ class QmdSearchModal extends Modal {
 			const stderr = Buffer.concat(stderrChunks).toString("utf-8");
 
 			if (this.plugin.settings.debugLogging) {
-				console.log("[QMD Search] stdout length:", stdout.length, "stderr length:", stderr.length);
+				console.debug("[QMD Search] stdout length:", stdout.length, "stderr length:", stderr.length);
 			}
 
 			if (code !== 0 && code !== null) {
