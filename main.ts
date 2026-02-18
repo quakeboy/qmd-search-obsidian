@@ -517,7 +517,7 @@ class QmdSearchSettingTab extends PluginSettingTab {
 		containerEl.empty();
 
 		new Setting(containerEl)
-			.setName("QMD binary path")
+			.setName("Binary path")
 			.setDesc(
 				"Full path to the qmd binary. If qmd is in your PATH, just 'qmd' works. " +
 				"Otherwise use the full path, e.g. /Users/you/.bun/bin/qmd"
@@ -534,7 +534,7 @@ class QmdSearchSettingTab extends PluginSettingTab {
 
 		new Setting(containerEl)
 			.setName("Collection name")
-			.setDesc("The QMD collection name pointing to your vault.")
+			.setDesc("The collection name pointing to your vault.")
 			.addText((text) =>
 				text
 					.setPlaceholder("obsidian")
@@ -546,7 +546,7 @@ class QmdSearchSettingTab extends PluginSettingTab {
 			);
 
 		new Setting(containerEl)
-			.setName("Extra PATH directory")
+			.setName("Additional directory to search for bun binary")
 			.setDesc(
 				"Directory containing the bun binary. QMD needs bun at runtime. " +
 				"Run 'which bun' in your terminal and paste the directory part here. " +
