@@ -522,7 +522,6 @@ class QmdSearchSettingTab extends PluginSettingTab {
 			)
 			.addText((text) =>
 				text
-					.setPlaceholder("qmd")
 					.setValue(this.plugin.settings.qmdPath)
 					.onChange(async (value) => {
 						this.plugin.settings.qmdPath = value.trim() || "qmd";
@@ -532,10 +531,9 @@ class QmdSearchSettingTab extends PluginSettingTab {
 
 		new Setting(containerEl)
 			.setName("Collection name")
-			.setDesc("The collection name pointing to your vault.")
+			.setDesc("The collection name pointing to your vault. Default value is 'obsidian'")
 			.addText((text) =>
 				text
-					.setPlaceholder("obsidian")
 					.setValue(this.plugin.settings.collection)
 					.onChange(async (value) => {
 						this.plugin.settings.collection = value.trim() || "obsidian";
