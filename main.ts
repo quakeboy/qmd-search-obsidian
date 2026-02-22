@@ -118,7 +118,11 @@ class QmdSearchModal extends Modal {
 		});
 
 		this.statusEl = contentEl.createDiv({ cls: "qmd-status" });
-		this.statusEl.style.display = "none";
+		
+		//this.statusEl.style.display = "none";
+		this.statusEl.addClass("qmd-status-hidden");
+		this.statusEl.removeClass("qmd-status-visible");
+
 
 		this.resultsEl = contentEl.createDiv({ cls: "qmd-results" });
 
@@ -264,7 +268,11 @@ class QmdSearchModal extends Modal {
 				if (items.length === 0) {
 					this.showStatus("empty");
 				} else {
-					this.statusEl.style.display = "none";
+					
+					//this.statusEl.style.display = "none";
+					this.statusEl.addClass("qmd-status-hidden");
+					this.statusEl.removeClass("qmd-status-visible");
+
 					this.renderResults(items);
 				}
 			} catch (parseErr) {
@@ -286,7 +294,10 @@ class QmdSearchModal extends Modal {
 
 	private showStatus(state: "searching" | "empty" | "error", errorMsg?: string) {
 		this.statusEl.empty();
-		this.statusEl.style.display = "flex";
+		
+		//this.statusEl.style.display = "flex";
+		this.statusEl.addClass("qmd-status-visible");
+		this.statusEl.removeClass("qmd-status-hidden");
 
 		if (state === "searching") {
 			const spinner = this.statusEl.createDiv({ cls: "qmd-spinner" });

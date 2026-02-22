@@ -41,6 +41,14 @@
 	font-size: 0.9em;
 }
 
+.qmd-status-hidden {
+    display: none;
+}
+
+.qmd-status-visible {
+    display: flex;
+}
+
 .qmd-error-text {
 	color: var(--text-error);
 }
