@@ -378,12 +378,12 @@ class QmdSearchModal extends Modal {
 	private openResult(item: QmdResult) {
 		const resolved = this.resolveVaultFile(item.file);
 		if (resolved) {
-			this.app.workspace.openLinkText(resolved.path, "", false);
+			void this.app.workspace.openLinkText(resolved.path, "", false);
 		} else {
 			const filePath = this.cleanFilePath(item.file);
 			const linkPath = filePath.replace(/\.md$/, "");
 			new Notice(`Could not resolve file, attempting direct open: ${linkPath}`);
-			this.app.workspace.openLinkText(linkPath, "", false);
+			void this.app.workspace.openLinkText(linkPath, "", false);
 		}
 		this.close();
 	}
