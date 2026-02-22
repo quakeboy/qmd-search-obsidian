@@ -4,6 +4,12 @@
 	padding: 0;
 }
 
+.qmd-search-modal
+{
+	width: 600px;
+	max-width: 90vw;
+}
+
 /* Input */
 .qmd-input-container {
 	padding: 10px 12px 6px;

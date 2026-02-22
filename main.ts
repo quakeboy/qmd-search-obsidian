@@ -109,8 +109,6 @@ class QmdSearchModal extends Modal {
 	onOpen() {
 		const { contentEl, modalEl } = this;
 		modalEl.addClass("qmd-search-modal");
-		modalEl.style.width = "600px";
-		modalEl.style.maxWidth = "90vw";
 
 		const inputContainer = contentEl.createDiv({ cls: "qmd-input-container" });
 		this.inputEl = inputContainer.createEl("input", {
