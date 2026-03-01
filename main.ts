@@ -542,7 +542,10 @@ class QmdSearchSettingTab extends PluginSettingTab {
 
 		new Setting(containerEl)
 			.setName("Collection name")
-			.setDesc("The collection name pointing to your vault. Default value is 'obsidian'")
+			.setDesc(
+				"The collection name pointing to your vault. "+ 
+				"Default value is 'obsidian'"
+			)
 			.addText((text) =>
 				text
 					.setValue(this.plugin.settings.collection)
